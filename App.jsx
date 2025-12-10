@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
-import { MainLayout } from "./layouts/MainLayout.jsx";
-import { InventoryPage } from "./features/inventory/InventoryPage.jsx";
-import { DashboardPage } from "./features/dashboard/DashboardPage.jsx";
-import FinancialAccountingPage from "./features/financial/FinancialAccountingPage.jsx";
+import { MainLayout } from "./src/layouts/MainLayout.jsx";
+import { InventoryPage } from "./src/features/inventory/InventoryPage.jsx";
+import { DashboardPage } from "./src/features/dashboard/DashboardPage.jsx";
+import FinancialAccountingPage from "./src/features/financial/FinancialAccountingPage.jsx";
 
 const PlaceholderPage = ({ title }) => (
   <div className="flex items-center justify-center h-full text-erp-400 bg-white border border-erp-200 rounded-sm">

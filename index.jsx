@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.jsx';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import './lib/mock-api.js'; // Initialize Mock API
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "./src/lib/mock-api.js"; // Initialize Mock API
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -13,7 +13,7 @@ const queryClient = new QueryClient({
   },
 });
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }

@@ -5,7 +5,7 @@ import { formatCurrency } from '../../lib/utils.js';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../../components/ui/card.jsx';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs.jsx';
 import { Badge } from '../../components/ui/badge.jsx';
-import { Separator } from '../../components/ui/separator.jsx';
+import { Separator } from "@/";
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   AreaChart, Area

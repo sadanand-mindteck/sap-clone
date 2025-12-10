@@ -1,13 +1,13 @@
-import { apiClient } from '../lib/axios.js';
+import { apiClient } from "../lib/axios.js";
 
 export const inventoryService = {
   getAll: async () => {
-    const response = await apiClient.get('/products');
+    const response = await apiClient.get("/products");
     return response.data;
   },
 
   create: async (data) => {
-    const response = await apiClient.post('/products', data);
+    const response = await apiClient.post("/products", data);
     return response.data;
   },
 
@@ -18,5 +18,5 @@ export const inventoryService = {
 
   delete: async (id) => {
     await apiClient.delete(`/products/${id}`);
-  }
+  },
 };
