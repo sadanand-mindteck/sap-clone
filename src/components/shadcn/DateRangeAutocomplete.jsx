@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { formatDateISO, getPredefinedRanges, suggestRanges, parseDateISO } from "../../lib/dateUtils";
+import { formatDateISO, getPredefinedRanges, suggestRanges, parseDateISO } from "@/lib/dateUtils";
 
 export default function DateRangeAutocomplete({ onChange, initialRange }) {
   const [query, setQuery] = useState("");

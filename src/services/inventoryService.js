@@ -1,4 +1,4 @@
-import { apiClient } from "../lib/axios.js";
+import { apiClient } from "@/lib/axios";
 
 export const inventoryService = {
   getAll: async () => {

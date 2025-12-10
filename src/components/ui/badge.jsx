@@ -1,5 +1,5 @@
-import React from "react"
-import { cn } from "../../lib/utils.js"
+import React from "react";
+import { cn } from "@/lib/utils";
 
 const Badge = React.forwardRef(({ className, variant = "default", ...props }, ref) => {
   const variants = {
@@ -9,7 +9,7 @@ const Badge = React.forwardRef(({ className, variant = "default", ...props }, re
     success: "border-transparent bg-green-500 text-white hover:bg-green-500/80",
     warning: "border-transparent bg-yellow-500 text-white hover:bg-yellow-500/80",
     outline: "text-erp-950 border-erp-200",
-  }
+  };
 
   return (
     <div
@@ -21,8 +21,8 @@ const Badge = React.forwardRef(({ className, variant = "default", ...props }, re
       )}
       {...props}
     />
-  )
-})
-Badge.displayName = "Badge"
+  );
+});
+Badge.displayName = "Badge";
 
-export { Badge }
+export { Badge };

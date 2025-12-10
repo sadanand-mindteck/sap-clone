@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import DateRangeAutocomplete from "../../components/shadcn/DateRangeAutocomplete";
-import CurrencyInput from "../../components/shadcn/CurrencyInput";
-import { formatCurrency } from "../../lib/numberUtils";
-import { formatDateISO } from "../../lib/dateUtils";
+import DateRangeAutocomplete from "@/components/shadcn/DateRangeAutocomplete";
+import CurrencyInput from "@/components/shadcn/CurrencyInput";
+import { formatCurrency } from "@/lib/numberUtils";
+import { formatDateISO } from "@/lib/dateUtils";
 
 export default function FinancialAccountingPage() {
   const [desc, setDesc] = useState("");

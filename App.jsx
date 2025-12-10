@@ -1,9 +1,10 @@
 import React from "react";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
-import { MainLayout } from "./src/layouts/MainLayout.jsx";
-import { InventoryPage } from "./src/features/inventory/InventoryPage.jsx";
-import { DashboardPage } from "./src/features/dashboard/DashboardPage.jsx";
-import FinancialAccountingPage from "./src/features/financial/FinancialAccountingPage.jsx";
+import { BrowserRouter, useRoutes } from "react-router-dom";
+
+import { MainLayout } from "@/layouts/MainLayout";
+import { InventoryPage } from "@/features/inventory/InventoryPage";
+import { DashboardPage } from "@/features/dashboard/DashboardPage";
+import FinancialAccountingPage from "@/features/financial/FinancialAccountingPage";
 
 const PlaceholderPage = ({ title }) => (
   <div className="flex items-center justify-center h-full text-erp-400 bg-white border border-erp-200 rounded-sm">
@@ -14,22 +15,28 @@ const PlaceholderPage = ({ title }) => (
   </div>
 );
 
-const App = () => {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<DashboardPage />} />
-          <Route path="inventory" element={<InventoryPage />} />
-          <Route path="procurement" element={<PlaceholderPage title="Procurement Module" />} />
-          <Route path="sales" element={<PlaceholderPage title="Sales & Distribution" />} />
-          <Route path="finance" element={<FinancialAccountingPage title="Financial Accounting" />} />
-          <Route path="settings" element={<PlaceholderPage title="Settings" />} />
-          <Route path="users" element={<PlaceholderPage title="User Management" />} />
-        </Route>
-      </Routes>
-    </HashRouter>
-  );
-};
+function AppRoutes() {
+  return useRoutes([
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        { index: true, element: <DashboardPage /> },
+        { path: "inventory", element: <InventoryPage /> },
+        { path: "procurement", element: <PlaceholderPage title="Procurement Module" /> },
+        { path: "sales", element: <PlaceholderPage title="Sales & Distribution" /> },
+        { path: "finance", element: <FinancialAccountingPage /> },
+        { path: "settings", element: <PlaceholderPage title="Settings" /> },
+        { path: "users", element: <PlaceholderPage title="User Management" /> },
+      ],
+    },
+  ]);
+}
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}

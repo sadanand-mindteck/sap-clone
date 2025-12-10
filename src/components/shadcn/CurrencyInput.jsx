@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { formatCurrency, parseCurrency } from "../../lib/numberUtils";
+import { formatCurrency, parseCurrency } from "@/lib/numberUtils";
 
 export default function CurrencyInput({ value, onChange, currency = "USD", locale = "en-US", placeholder }) {
   const [display, setDisplay] = useState(value != null ? formatCurrency(value, currency, locale) : "");

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { apiClient } from '../../lib/axios.js';
-import { formatCurrency } from '../../lib/utils.js';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../../components/ui/card.jsx';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '../../components/ui/tabs.jsx';
-import { Badge } from '../../components/ui/badge.jsx';
-import { Separator } from "@/";
+import { apiClient } from '@lib/axios';
+import { formatCurrency } from '@lib/utils';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@components/ui/tabs';
+import { Badge } from '@components/ui/badge';
+import { Separator } from "@/components/ui/separator";
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   AreaChart, Area

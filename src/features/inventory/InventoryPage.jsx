@@ -8,11 +8,11 @@ import {
   getPaginationRowModel,
   flexRender,
 } from "@tanstack/react-table";
-import { inventoryService } from "../../services/inventoryService.js";
-import { Button } from "../../components/ui/button.jsx";
-import { Input } from "../../components/ui/input.jsx";
-import { formatCurrency, cn } from "../../lib/utils.js";
-import { ProductForm } from "./ProductForm.jsx";
+import { inventoryService } from "@/services/inventoryService";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { formatCurrency, cn } from "@/lib/utils";
+import { ProductForm } from "@/features/inventory/ProductForm";
 
 // Icons
 const SortIcon = ({ className }) => (
