@@ -1,0 +1,38 @@
+@config "./tailwind.config.cjs";
+@import "tailwindcss";
+
+:root {
+  --erp-primary: #0f62fe;
+}
+
+/* App base styles (moved from inline <style> in index.html) */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-size: 13px; /* SAP-like default size */
+}
+
+/* Custom scrollbar for data-heavy tables */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Helpful utility wrappers */
+.container-centered {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
