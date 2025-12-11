@@ -1,7 +1,7 @@
-import React from 'react';
-import { useFormContext, Controller } from 'react-hook-form';
-import { Input } from '../ui/input.jsx';
-import { cn } from '../../lib/utils.js';
+import React from "react";
+import { useFormContext, Controller } from "react-hook-form";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 export const RHFInput = ({ name, label, className, ...props }) => {
   const { control } = useFormContext();
@@ -16,7 +16,7 @@ export const RHFInput = ({ name, label, className, ...props }) => {
           <Input
             {...field}
             {...props}
-            value={field.value ?? ''} // Handle null/undefined
+            value={field.value ?? ""} // Handle null/undefined
             className={cn(error && "border-red-500 focus-visible:ring-red-500", className)}
           />
           {error && <span className="text-[10px] text-red-600">{error.message}</span>}

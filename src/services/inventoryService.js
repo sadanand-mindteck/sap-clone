@@ -1,4 +1,4 @@
-import { apiClient } from "@/lib/axios";
+import { apiClient } from "@/lib/axios.js";
 
 export const inventoryService = {
   getAll: async () => {
@@ -8,6 +8,11 @@ export const inventoryService = {
 
   create: async (data) => {
     const response = await apiClient.post("/products", data);
+    return response.data;
+  },
+
+  bulkCreate: async (items) => {
+    const response = await apiClient.post("/products/bulk", items);
     return response.data;
   },
 

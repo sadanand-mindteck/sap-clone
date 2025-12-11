@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import { apiClient } from "@/lib/axios";
-import { formatCurrency } from "@/lib/utils";
+import { apiClient } from "@/lib/axios.js";
+import { formatCurrency } from "@/lib/utils.js";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";

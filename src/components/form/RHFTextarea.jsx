@@ -1,8 +1,8 @@
-import React from 'react';
-import { useFormContext, Controller } from 'react-hook-form';
-import { Textarea } from '../ui/textarea.jsx';
-import { Label } from '../ui/label.jsx';
-import { cn } from '../../lib/utils.js';
+import React from "react";
+import { useFormContext, Controller } from "react-hook-form";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 
 export const RHFTextarea = ({ name, label, className, ...props }) => {
   const { control } = useFormContext();
@@ -18,7 +18,7 @@ export const RHFTextarea = ({ name, label, className, ...props }) => {
             {...field}
             {...props}
             id={name}
-            value={field.value ?? ''}
+            value={field.value ?? ""}
             className={cn(error && "border-red-500 focus-visible:ring-red-500", className)}
           />
           {error && <span className="text-[10px] text-red-600">{error.message}</span>}
